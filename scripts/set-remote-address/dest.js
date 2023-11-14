@@ -24,6 +24,9 @@ async function main() {
     "10150",
     klaytnDeployedContractAddress
   );
+
+  console.log("successfully set trusted remote on destination chain");
+
 }
 
 // We recommend this pattern to be able to use async/await everywhere

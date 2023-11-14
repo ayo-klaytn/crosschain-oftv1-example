@@ -27,6 +27,7 @@ async function main() {
     mumbaiDeployedContractAddress
   );
 
+  console.log("successfully set trusted remote on source chain");
 
 }
 

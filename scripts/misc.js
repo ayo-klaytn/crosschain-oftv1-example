@@ -16,27 +16,30 @@ async function main() {
     klaytnDeployedContractAddress
   );
 
-  // Step 3: approve src contract to spend a number of tokens (100 CCT tokens)
+  // approve src contract to spend a number of tokens (100 CCT tokens)
 
+  console.log(`Approving.....`);
   await crosschainTokenSRC.approve(
     klaytnDeployedContractAddress,
     "100000000000000000000"
   );
+  console.log(`Done approving.....`);
 
-  // Step 4: Set minDstGas on source chain
+
+  // Set minDstGas on source chain
   // accepts the following: 1) dest chainId 2) packet type ("0" meaning send) 3) gas limit amount 
 
   console.log(`Setting minDstGas`);
   await crosschainTokenSRC.setMinDstGas(10109, 0, 200000);
   console.log(`Done setting minDstGas`);
 
-  // Step 5: Set setUseCustomAdapterParams to true
+  // Set setUseCustomAdapterParams to true
 
   console.log(`Setting CustomAdapterParams`);
   await crosschainTokenSRC.setUseCustomAdapterParams(true);
   console.log(`Done setting CustomAdapterParams`);
 
-  // Step 6: Execute the estimateSendFee function
+  // Execute the estimateSendFee function
 
   console.log(`Estimating fee`);
   const tx = await crosschainTokenSRC.estimateSendFee(
