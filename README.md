@@ -52,24 +52,16 @@ npx hardhat vars set PRIVATE_KEY
 
 ```bash
 	npm run deploy-src
-```
-
-or
-
-```bash
-	npx hardhat run scripts/deploy/src-contract.js --network baobab
+    // or
+    npx hardhat run scripts/deploy/src-contract.js --network baobab
 ```
 
 2. To mumbai (destination chain)
 
 ```bash
 	npm run deploy-dest
-```
-
-or
-
-```bash
-	npx hardhat run scripts/deploy/dest-contract.js --network mumbai
+    // or
+    npx hardhat run scripts/deploy/dest-contract.js --network mumbai
 ```
 
 We have deployed the crosschaintokens contract on Klaytn Baobab here: [0x3c7002896d7D0604C07feB3b16ce7fA937f12724](https://baobab.klaytnscope.com/account/0x3c7002896d7D0604C07feB3b16ce7fA937f12724) and on Polygon Mumbai here: [0xC1D4ac1eE65FD2e298F6d0423905e14bA63E0428](https://mumbai.polygonscan.com/address/0xC1D4ac1eE65FD2e298F6d0423905e14bA63E0428) for this example.
@@ -80,22 +72,16 @@ We have deployed the crosschaintokens contract on Klaytn Baobab here: [0x3c70028
 
 ```bash
 	npm run set-remote-src
-```
-or 
-
-```bash
-	npx hardhat run scripts/set-remote-address/src.js --network baobab
+    // or
+    npx hardhat run scripts/set-remote-address/src.js --network baobab
 ```
 
 2. On mumbai (destination chain)
 
 ```bash
 	npm run set-remote-dest
-```
-or 
-
-```bash
-	npx hardhat run scripts/set-remote-address/dest.js --network mumbai
+    // or 
+    npx hardhat run scripts/set-remote-address/dest.js --network mumbai
 ```
 
 ### Run Misc
@@ -103,11 +89,8 @@ To collectively execute the **approve()**, **setMinDstGas()**, **setUseCustomAda
 
 ```bash
 	npm run run-misc
-```
-or 
-
-```bash
-	npx hardhat run scripts/misc.js --network baobab
+    // or 
+    npx hardhat run scripts/misc.js --network baobab
 ```
 
 ## Execute sendFrom() function
@@ -115,21 +98,15 @@ To send tokens from one chain to another using the LayerZero OFTV1, you need to 
 
 ```bash
 	npm run exec-sendFrom
-```
-or 
-
-```bash
-	npx hardhat run scripts/send-from.js --network baobab
+    // or
+    npx hardhat run scripts/send-from.js --network baobab
 ```
 
 You can verify the cross-chain transaction for this example on [LayerZeroScan](https://testnet.layerzeroscan.com/10150/address/0x3c7002896d7d0604c07feb3b16ce7fa937f12724/message/10109/address/0xc1d4ac1ee65fd2e298f6d0423905e14ba63e0428/nonce/1). Also you can check the balance of the recipient address on the destination chain by running this command: 
 
 ```bash
 npm run check-dest-bal
-```
-or 
-
-```bash
+// or
 npx hardhat run scripts/check-balance.js --network mumbai
 ```
 
