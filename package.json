@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "compile" : "npx hardhat compile",
+    "deploy-src" : "npx hardhat run scripts/deploy/src-contract.js --network baobab",
+    "deploy-dest" : "npx hardhat run scripts/deploy/dest-contract.js --network mumbai",
+    "set-remote-src": "npx hardhat run scripts/set-remote-address/src.js --network baobab",
+    "set-remote-dest" : "npx hardhat run scripts/set-remote-address/dest.js --network mumbai",
+    "run-misc" : "npx hardhat run scripts/misc.js --network baobab",
+    "exec-sendFrom" : "npx hardhat run scripts/send-from.js --network baobab",
+    "check-dest-bal": "npx hardhat run scripts/check-balance.js --network mumbai"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "hardhat": "^2.19.0"
+  },
+  "dependencies": {
+    "@layerzerolabs/solidity-examples": "^1.0.0",
+    "@openzeppelin/contracts": "^5.0.0"
+  }
+}
+
+
